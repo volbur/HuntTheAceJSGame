@@ -13,6 +13,9 @@ const playGameButtonElem = document.getElementById('playGame');
 
 const cardContainerElem = document.querySelector('.card-container');
 
+const collapsedGridAreaTemplate = '"a a" "a a"';
+const cardCollectionCellClass = ".card-pos-a";
+
 {/* <div class="card">
     <div class="card-inner">
         <div class="card-front">
@@ -34,17 +37,34 @@ function loadGame() {
     playGameButtonElem.addEventListener('click', ()=>startGame());
 }
 function startGame(){
-    initilizeNewGame();
+    initializeNewGame();
     startRound();
 }
-function initilizeNewGame(){
+function initializeNewGame(){
 
 }
 function startRound(){
-    initilizeNewRound();
+    initializeNewRound();
+    collectCards();
 }
-function initilizeNewRound(){
+function initializeNewRound(){
 
+}
+
+function collectCards(){
+    transformGridArea(collapsedGridAreaTemplate);
+    addCardsToGridAreaCell(cardCollectionCellClass);
+}
+
+function transformGridArea(areas){
+    cardContainerElem.style.gridTemplateAreas = areas;
+}
+function addCardsToGridAreaCell(cellPositionClassName){
+    const cellPositionElem = document.querySelector(cellPositionClassName);
+
+    cards.forEach((card, index) =>{
+        addChildElement(cellPositionElem, card)
+    })
 }
 
 function createCards(){
