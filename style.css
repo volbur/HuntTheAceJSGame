@@ -28,19 +28,19 @@ main{
 
 .card-pos-a{
     grid-area: a;
-    background-color: grey;
+    /* background-color: grey; */
 }
 .card-pos-b{
     grid-area: b;
-    background-color: goldenrod;
+    /* background-color: goldenrod; */
 }
 .card-pos-c{
     grid-area: c;
-    background-color: rosybrown;
+    /* background-color: rosybrown; */
 }
 .card-pos-d{
     grid-area: d;
-    background-color: darkcyan;
+    /* background-color: darkcyan; */
 }
 .card-pos-a, .card-pos-b, .card-pos-c, .card-pos-d{
     display: flex;
